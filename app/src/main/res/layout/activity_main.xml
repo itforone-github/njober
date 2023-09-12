@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <!-- name에는 변수로 쓸 네이밍을 지정하시고
+        type은 패키지명과 클래스명을 입력하시면 됩니다 -->
+        <variable
+            name="mainData"
+            type="co.kr.itforone.njober.MainActivity" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/webLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".9"
+                android:orientation="vertical">
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight=".9"
+                    android:focusable="auto">
+
+                </WebView>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+<!--            <com.byappsoft.huvleadlib.BannerAdView-->
+<!--                android:id="@+id/banner_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_weight=".1" />-->
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</layout>
